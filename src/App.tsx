@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import Test from './components/Test';
+import Test2 from './components/Test2';
+import Test3 from './components/Test3';
+import Test4 from './components/Test4';
+import Practice from './components/Practice';
+import MyPromise from './components/MyPromise';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <Link to="/" className="App-home-link">
+            <h1>Tests Playground</h1>
+          </Link>
+        </header>
+        <main className="App-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/test" element={<Test />} />
+            <Route path="/test2" element={<Test2 />} />
+            <Route path="/test3" element={<Test3 />} />
+            <Route path="/test4" element={<Test4 />} />
+            <Route path="/practice" element={<Practice />} />
+            <Route path="/mypromise" element={<MyPromise />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

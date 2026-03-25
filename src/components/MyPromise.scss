@@ -1,0 +1,52 @@
+.mypromise {
+  padding: 20px;
+
+  a {
+    color: #646cff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  &__console {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    overflow-x: auto;
+
+    .log-entry {
+      padding: 4px 0;
+      line-height: 1.5;
+
+      &.info {
+        color: #9cdcfe;
+      }
+
+      &.code {
+        color: #ce9178;
+        padding-left: 10px;
+      }
+
+      &.result {
+        color: #4ec9b0;
+        padding-left: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
